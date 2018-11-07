@@ -1,0 +1,37 @@
+<html>
+   <head>
+      <title>welcome</title>
+
+   
+   
+   </head>
+    <body  style="background:#1abc9c">
+          <h1 style="color:red">ICTA Full Stack Program</h1>
+          <p style="background:yellow;color:red">this is my first paragraph</p>
+          <h2>ICTA Full Stack Program</h2>
+          <h3>ICTA Full Stack Program</h3>
+          <h4>ICTA Full Stack Program</h4>
+          <h5>ICTA Full Stack Program</h5>
+          <h6>ICTA Full Stack Program</h6>
+          <a href="https://www.facebook.com">clik here</a>
+          <img src="akira-hojo-767088-unsplash.jpg" width="100" height="100" />
+          <table>
+            <tr>
+            <td>User name</td>
+            <td><input type="text"/></td>
+            </tr>
+            <tr>
+            <td>password</td>
+            <td><input type="password"/></td>
+            
+            </tr> 
+            <tr></tr>
+
+          
+          </table>
+    </body>
+
+
+
+
+</html>      
