@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Student Details</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+<script src="JS/script.js"></script>
+</head>
+<body>
+    <div class="container">
+         <div class="jumbotron text-center" style="background:#e67e22">
+            <h2>Cochin University Of Science And Technology</h2>
+            <h4>Mark Evaluation</h4>
+        </div>
+        <div class="col-6" style="margin:auto;padding:100px;background:antiquewhite">
+            <div class="form" style="margin: auto">
+                <div class="row">
+                    <div class="col-sm-6">Name</div>
+                    <div class="col-sm-6"><input type="text" class="form-control" id="getname"/></div>
+                </div><br>
+                <div class="row">
+                    <div class="col-sm-6">Register Number</div>
+                     <div class="col-sm-6"><input type="number"class="form-control"id="getroll"/></div>
+                </div><br>
+                <div class="row">
+                     <div class="col-sm-6">Semester</div>
+                    <div class="col-sm-6"><select class="form-control"id="getsem">
+                        <option >--Select--</option>
+                        <option value="s1">Semster 1</option>
+                         <option value="s2">Semester 2</option>
+                        <option value="s3">Semester 3</option>
+                         <option value="s4">Semester 4</option>
+                        <option value="s5">Semester 5</option>
+                        <option value="s6">Semester 6</option>               
+                         </select></div>
+                </div><br>
+                <div class="row">
+                    <div class="col-sm-6">College Name</div>
+                    <div class="col-sm-6"><input type="text"class="form-control"id="cname"/></div>
+                </div>
+            </div>
+    </div>
+    <table class="table-bordered text-center"style="margin:auto">
+            <thead class="thead-dark" style="background:#e67e22;color:white">
+                <tr class="table">
+                    <th>Subject</th>
+                    <th>Mark Obtained</th>
+                    <th>Total Mark</th>
+                </tr>
+            </thead><br>
+            <tbody>
+                    <tr>
+                        <td><input type="text" id="subject1" class="form-control"></td>
+                        <td><input type="number" id="mark1" class="form-control"></td>
+                        <td><input type="number" id="totalmark1" class="form-control"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="text" id="subject2" class="form-control"></td>
+                        <td><input type="number" id="mark2" class="form-control"></td>
+                        <td><input type="number" id="totalmark2" class="form-control"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="text" id="subject3" class="form-control"></td>
+                        <td><input type="number" id="mark3" class="form-control"></td>
+                        <td><input type="number" id="totalmark3" class="form-control"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="text" id="subject4" class="form-control"></td>
+                        <td><input type="number" id="mark4" class="form-control"></td>
+                        <td><input type="number" id="totalmark4" class="form-control"></td>
+                    </tr>
+                </tbody>
+            </table><br>
+        </div>
+        <div class="row"><button style="margin:auto" class="btn btn-success" onclick="generate();">Generate Marklist</button></div>
+        <br>
+   </div>
+   <div class="container" style="margin:auto">
+        <div class="col-xlS-12" style="margin:auto">
+        <form>
+               <div class="panel panel-default">
+                <div id="main-content"class="container">
+                        <div class="jumbotron text-center" style="background:blanchedalmond">
+                            <h2>Cochin University of Science And Technology</h2>
+                            <h4>MarkList</h4>
+                <div class="panel-heading" style="margin: auto;background:palevioletred"><p id="panelHead"></p></div>
+                <div class="panel-body">
+                    <div class="row">
+                       
+                        <div class="col-sm-3"><p><label id="nmTag"></label><label id="sname"></label></p></div><!--name label-->
+                        <div class="col-sm-3"><p></p></div>
+                        <div class="col-sm-3"><p></p></div>
+                        <div class="col-sm-3"><p><label id="rgTag"></label><label id="sregno"></label></p></div><!--reg no label-->
+                        
+                        
+                    </div>
+                    <div class="row">
+                        
+                        <div class="col-sm-3"><p><label id="semTag"></label><label id="ssem"></label></p></div><!--sem label-->
+                        <div class="col-sm-3"><p></p></div><!--sem-->
+                        <div class="col-sm-3"><p></p></div><!--college label-->
+                        <div class="col-sm-3"><p><label id="collegeTag"></label><label id="scollege"></label></p></div><!--college-->
+                       
+                    </div>
+                    <div class="row">
+                        <table class="table" id="marktable"></table>
+                    </div><br>
+                </div>
+                <div class="panel-footer">
+                        <p id="status"></p>
+                </div>
+            </div>
+            </div>
+        </div>
+         </div>
+     </form> 
+
+       
+</body>
+</html>
+                
