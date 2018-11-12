@@ -1,0 +1,6 @@
+a=input("Enter a string: ")
+print(a[0])
+print(a[1:3])
+print(a[1:])
+b=input("Enter another string: ")
+print(a*4)
